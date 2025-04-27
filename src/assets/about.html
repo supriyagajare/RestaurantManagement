@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Restaurant Management</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap");
+
+
+body{
+	
+	background-image: url('17.jpg');
+	background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  opacity: 1.0;
+
+}
+::selection{
+  background:    #FF676D;
+  color: #fff;
+}
+.container{
+  max-width: 950px;
+  width: 100%;
+  overflow: hidden;
+  padding: 80px 0;
+}
+.container .main-card{
+  display: flex;
+  justify-content: space-evenly;
+  width: 200%;
+  transition: 1s;
+}
+#two:checked ~ .main-card{
+  margin-left: -100%;
+}
+.container .main-card .cards{
+  width: calc(100% / 2 - 10px);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 20px;
+  justify-content: space-between;
+}
+.main-card .cards .card{
+  width: calc(100% / 3 - 10px);
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s ease;
+}
+.main-card .cards .card:hover{
+  transform: translateY(-15px);
+}
+.cards .card .content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.cards .card .content .img{
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  padding: 3px;
+  background: #FF676D;
+  margin-bottom: 14px;
+}
+.card .content .img img{
+  height: 100%;
+  width: 100%;
+  border: 3px solid #ffff;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.card .content .name{
+  font-size: 20px;
+  font-weight: 500;
+}
+.card .content .job{
+  font-size: 20px;
+  color: #FF676D;
+}
+.card .content .media-icons{
+  margin-top: 10px;
+  display: flex;
+}
+.media-icons a{
+  text-align: center;
+  line-height: 33px;
+  height: 35px;
+  width: 35px;
+  margin: 0 4px;
+  font-size: 14px;
+  color: #FFF;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: #FF676D;
+  transition: all 0.3s ease;
+}
+.media-icons a:hover{
+  color: #FF676D;
+  background-color: #fff;
+  border-color: #FF676D;
+}
+ .container .button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.button label{
+  height: 15px;
+  width: 15px;
+  border-radius: 20px;
+  background: #fff;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.button label.active{
+  width: 35px;
+}
+#one:checked ~ .button .one{
+  width: 35px;
+}
+#one:checked ~ .button .two{
+  width: 15px;
+}
+#two:checked ~ .button .one{
+  width: 15px;
+}
+#two:checked ~ .button .two{
+  width: 35px;
+}
+input[type="radio"]{
+  display: none;
+}
+@media (max-width: 768px) {
+  .main-card .cards .card{
+    margin: 20px 0 10px 0;
+    width: calc(100% / 2 - 10px);
+  }
+}
+@media (max-width: 600px) {
+  .main-card .cards .card{
+    /* margin: 20px 0 10px 0; */
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.fade-in-image {
+  animation: fadeIn 50s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+.containers1{
+  display: inline-block;
+}
+
+.texts1{
+  font-size: 3em;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: 
+          typing1 2s steps(15),
+          cursor1 .4s step-end infinite alternate;
+}
+
+@keyframes cursor1{
+  50% { border-color: transparent}
+}
+
+@keyframes typing1{
+  from{ width: 0;}
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+a:hover {
+    color: black;
+    background-color: orange;
+}
+
+.hoverdiv:hover{
+  background-color: dimgray;
+    color: blue;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.footer-distributed{
+	background-color:rgba(0,0,0,0.5);
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  lightseagreen;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+
+.wrapper {
+padding-top: 120px;
+}
+.card-img-top {
+box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+.card-body{
+    text-align: center;
+    box-shadow: 0px 15px 15px -8px rgba(0,0,0,0.5)
+}
+.card-body h6 {
+font-size: 14px;
+text-transform: uppercase;
+color: deeppink;
+}
+.card-title {
+text-transform: uppercase;
+font-weight: bold;
+font-size: 24px;
+}
+
+.socials a {
+width: 40px;
+height: 40px;
+display: inline-block;
+border-radius: 50%;
+margin: 0 5px;
+}
+.socials a i {
+color: #fff;
+padding: 12px 0;
+}    
+
+.socials a:nth-child(1) {
+background: #3b5998;
+}.socials a:nth-child(2) {
+background: #ff0000;
+}.socials a:nth-child(3) {
+background: #007bb5;
+}.socials a:nth-child(4) {
+background: #ea4c89;
+}
+
+@media (max-width: 800px){
+    .mx-30{
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+:root {
+  /* Colors */
+  --brand-color: hsl(46, 100%, 50%);
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+  /* Fonts */
+  --font-title: "Montserrat", sans-serif;
+  --font-text: "Lato", sans-serif;
+}
+
+/* RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h2,
+p {
+  margin: 0;
+}
+
+/* GLOBAL STYLES */
+
+
+h2 {
+  font-size: 2.25rem;
+  font-family: var(--font-title);
+  color: var(--white);
+  line-height: 1.1;
+}
+
+p {
+  font-family: var(--font-text);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+/* CARD COMPONENT */
+
+.card {
+  display: grid;
+  place-items: center;
+  width: 80vw;
+  max-width: 21.875rem;
+  height: 28.125rem;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+.card > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.card__background {
+  object-fit: cover;
+  max-width: 100%;
+  height: 100%;
+}
+
+.card__content {
+  --flow-space: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-end;
+  height: 55%;
+  padding: 12% 1.25rem 1.875rem;
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.3) 10%,
+    hsl(0, 0%, 0%) 100%
+  );
+}
+
+.card__content--container {
+  --flow-space: 1.25rem;
+}
+
+.card__title {
+  position: relative;
+  width: fit-content;
+  width: -moz-fit-content; /* Prefijo necesario para Firefox  */
+}
+
+.card__title::after {
+  content: "";
+  position: absolute;
+  height: 0.3125rem;
+  width: calc(100% + 1.25rem);
+  bottom: calc((1.25rem - 0.5rem) * -1);
+  left: -1.25rem;
+  background-color: var(--brand-color);
+}
+
+.card__button {
+  padding: 0.75em 1.6em;
+  width: fit-content;
+  width: -moz-fit-content; /* Prefijo necesario para Firefox  */
+  font-variant: small-caps;
+  font-weight: bold;
+  border-radius: 0.45em;
+  border: none;
+  background-color: var(--brand-color);
+  font-family: var(--font-title);
+  font-size: 1.125rem;
+  color: var(--black);
+}
+
+.card__button:focus {
+  outline: 2px solid black;
+  outline-offset: -5px;
+}
+
+@media (any-hover: hover) and (any-pointer: fine) {
+  .card__content {
+    transform: translateY(62%);
+    transition: transform 500ms ease-out;
+    transition-delay: 500ms;
+  }
+
+  .card__title::after {
+    opacity: 0;
+    transform: scaleX(0);
+    transition: opacity 1000ms ease-in, transform 500ms ease-out;
+    transition-delay: 500ms;
+    transform-origin: right;
+  }
+
+  .card__background {
+    transition: transform 500ms ease-in;
+  }
+
+  .card__content--container > :not(.card__title),
+  .card__button {
+    opacity: 0;
+    transition: transform 500ms ease-out, opacity 500ms ease-out;
+  }
+
+  .card:hover,
+  .card:focus-within {
+    transform: scale(1.05);
+    transition: transform 500ms ease-in;
+  }
+
+  .card:hover .card__content,
+  .card:focus-within .card__content {
+    transform: translateY(0);
+    transition: transform 500ms ease-in;
+  }
+
+  .card:focus-within .card__content {
+    transition-duration: 0ms;
+  }
+
+  .card:hover .card__background,
+  .card:focus-within .card__background {
+    transform: scale(1.3);
+  }
+
+  .card:hover .card__content--container > :not(.card__title),
+  .card:hover .card__button,
+  .card:focus-within .card__content--container > :not(.card__title),
+  .card:focus-within .card__button {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+    transition-delay: 1000ms;
+  }
+
+  .card:hover .card__title::after,
+  .card:focus-within .card__title::after {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: opacity 500ms ease-in, transform 500ms ease-in;
+    transition-delay: 500ms;
+  }
+}
+
+
+
+#more {display: none;}
+
+    </style>
+</head>
+<body>
+
+ 
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(189, 219, 220);">
+    <div class="navbar-brand">
+      <img src="symbol.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
+      Restaurant
+    </div>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Restaurant-Menu</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="create-restaurant"><b>Add Restaurant</b></a></li>
+            <li><a class="dropdown-item" href="restaurants"><b>Restaurant List</b></a></li>
+                    </ul>
+          </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact </a>
+        </li>
+       
+      </ul>
+      
+    </div>
+  </nav>
+
+
+
+
+
+  <div>
+        <div class="bg-image fade-in-image" 
+        style="background-color: rgba(15, 23, 43, .9);; height: 50vh;">
+        <nav class="navbar navbar-expand-sm ">
+            <div class="container-fluid" >
+              
+            </div>
+          </nav>
+          <div style="color: #fff; text-align: center; padding: 100px;">
+        <h1 class="containers1 texts1">About the Management </h1>
+        <a style="color: rgb(189, 219, 220); font-size: 1.5em;" href="home.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a style="color: rgb(189, 219, 220); font-size: 1.5em;" href="#footer">Contact</a>
+      </div>
+        </div>
+          </div>
+<br> <br>
+<!-- cards Section -->
+<br>
+<h2 style="text-align: center; ">Our Team Members</h2>
+<p style="font-size: 1.2em; text-align: center; color: rgb(189, 219, 220)"> <b>We're a small team focused on making Big Management System 
+  to provide all service related to restaurants and easy to use.</b>
+</p><br><br><br>
+<div>
+<div class="container">
+  <input type="radio" name="dot" id="one">
+  <input type="radio" name="dot" id="two">
+  <div class="main-card">
+    <div class="cards">
+      <div class="card">
+       <div class="content">
+         <div class="img">
+          <img src="av1.jpg" alt="">
+         </div>
+         <div class="details">
+           <div class="name">Shruti</div>
+           <div class="job">General Manager</div>
+         </div>
+         <div class="media-icons">
+           <a href="#"><i class="fab fa-facebook-f"></i></a>
+           <a href="#"><i class="fab fa-twitter"></i></a>
+           <a href="#"><i class="fab fa-instagram"></i></a>
+           <a href="#"><i class="fab fa-youtube"></i></a>
+         </div>
+       </div>
+      </div>
+      <div class="card">
+       <div class="content">
+         <div class="img">
+          <img src="av5.jpg" alt="">
+         </div>
+         <div class="details">
+           <div class="name">Supriya</div>
+           <div class="job">Assistant Manager</div>
+         </div>
+         <div class="media-icons">
+           <a href="#"><i class="fab fa-facebook-f"></i></a>
+           <a href="#"><i class="fab fa-twitter"></i></a>
+           <a href="#"><i class="fab fa-instagram"></i></a>
+           <a href="#"><i class="fab fa-youtube"></i></a>
+         </div>
+       </div>
+      </div>
+      <div class="card">
+       <div class="content">
+         <div class="img">
+          <img src="av7.png" alt="">
+         </div>
+         <div class="details">
+           <div class="name">Akshata</div>
+           <div class="job"> Executive Chef</div>
+         </div>
+         <div class="media-icons">
+           <a href="#"><i class="fab fa-facebook-f"></i></a>
+           <a href="#"><i class="fab fa-twitter"></i></a>
+           <a href="#"><i class="fab fa-instagram"></i></a>
+           <a href="#"><i class="fab fa-youtube"></i></a>
+         </div>
+       </div>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+       <div class="content">
+         <div class="img">
+           <img src="av7.png" alt="">
+         </div>
+         <div class="details">
+           <div class="name">Snehal</div>
+           <div class="job">Kitchen Manager</div>
+         </div>
+         <div class="media-icons">
+           <a href="#"><i class="fab fa-facebook-f"></i></a>
+           <a href="#"><i class="fab fa-twitter"></i></a>
+           <a href="#"><i class="fab fa-instagram"></i></a>
+           <a href="#"><i class="fab fa-youtube"></i></a>
+         </div>
+       </div>
+      </div>
+      <div class="card">
+       <div class="content">
+         <div class="img">
+           <img src="av1.jpg" alt="">
+         </div>
+         <div class="details">
+           <div class="name">Minal</div>
+           <div class="job">Food & Beverage Manager</div>
+         </div>
+         <div class="media-icons">
+           <a href="#"><i class="fab fa-facebook-f"></i></a>
+           <a href="#"><i class="fab fa-twitter"></i></a>
+           <a href="#"><i class="fab fa-instagram"></i></a>
+           <a href="#"><i class="fab fa-youtube"></i></a>
+         </div>
+       </div>
+      </div>
+      <div class="card">
+       <div class="content">
+         <div class="img">
+           <img src="av5.jpg" alt="">
+         </div>
+         <div class="details">
+           <div class="name">Aachal</div>
+           <div class="job">Kitchen Manager</div>
+         </div>
+         <div class="media-icons">
+           <a href="#"><i class="fab fa-facebook-f"></i></a>
+           <a href="#"><i class="fab fa-twitter"></i></a>
+           <a href="#"><i class="fab fa-instagram"></i></a>
+           <a href="#"><i class="fab fa-youtube"></i></a>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <div class="button">
+    <label for="one" class=" active one"></label>
+    <label for="two" class="two"></label>
+  </div>
+</div>
+</div>
+<br><br>
+<hr>
+
+        <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about" style="background-color: rgba(0,0,0,0.5);">
+    <div class="w3-col m6 w3-padding-large w3-hide-small"><br><br><br><br><br>
+     <img src="r1.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="500" height="650" style="margin-left: 80px;">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large" style="color: #fff;">
+      <h1 class="w3-center" style="color: rgb(189, 219, 220)">About Management</h1><br>
+      <h5 class="w3-center">Tradition 2023</h5>
+      <p class="w3-justify" style="margin-right: 40px;">A restaurant management system project typically involves 
+        designing and developing a software solution that helps streamline various 
+        operations and tasks within a restaurant. The goal is to improve efficiency, 
+        enhance customer experience, and facilitate better management of resources. 
+        Here's an overview of what such a project might involve: <span id="dots">...</span><span id="more"><br>
+        <b>Table Reservation:</b> A reservation system could allow customers to book tables 
+        in advance. This could include options for selecting table sizes, date and time, and special requests.
+        Reservation Form: Provide a reservation form where customers can input details like date, time, party size, and any special requests.
+        Availability Check: Check table availability and prevent double booking. Notify customers if the desired reservation time is unavailable.
+        Confirmation: Send email or SMS confirmations to customers upon successful reservation.
+        We propose to build a software project that can efficiently handle and manage various activities of a restaurant 
+        and all these activities will be happening under the supervision of the administrator. The businesses
+         in restaurants are now growing constantly. At the same time, the need for managing its operations 
+         and tasks arises. The best way to optimize these activities is growing the business online as well.
+          Today’s generation encourages high-tech services especially over the Internet. </span></p></div>
+           <button onclick="myFunction()" id="myBtn">Read more</button>
+ </div>
+  
+
+<br><br>
+
+<div style=" display: grid; margin-left: 300px;">
+ <article class="card">
+  <img
+    class="card__background"
+    src="i1.jpg"
+    alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+    width="1920"
+    height="2193"
+  />
+  <div class="card__content | flow">
+    <div class="card__content--container | flow">
+      <h2 class="card__title">Services</h2>
+      <p class="card__description">
+        Book a table and take service from us
+      </p>
+      <button class="card__button"><a href="login.html">Read more</a></button>
+    </div>
+    
+  </div>
+</article>
+</div>
+
+<div style=" display: grid; margin-left: 800px;">
+  <article class="card">
+   <img
+     class="card__background"
+     src="i2.jpg"
+     alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+     width="1920"
+     height="2193"
+   />
+   <div class="card__content | flow">
+     <div class="card__content--container | flow">
+       <h2 class="card__title">Contact</h2>
+       <p class="card__description">
+          Gave any Message or feedback
+       </p>
+       <button class="card__button"><a href="contact.html">Read more</a></button>
+     </div>
+     
+   </div>
+ </article>
+ </div>
+
+ <br><br>
+
+
+<footer class="footer-distributed" style="width: 100%; margin-right: 0%;">
+
+  <div class="footer-left">
+
+    <p class="footer" >
+      &nbsp;&nbsp;&nbsp;
+      
+      <a href="contact.html" style=" font-size:16px; color: #ccc;">Contact</a><br><br>&nbsp;&nbsp;&nbsp;
+
+      <!-- <a href="assets/card.html" style="font-size:16px; color: #ccc;">List</a><br> <br>&nbsp;&nbsp;&nbsp; -->
+
+	  <a href="#" style="font-size:16px; color: #ccc;">Setting</a><br> <br>&nbsp;&nbsp;&nbsp;
+
+    <a href="contact.html" style="font-size:16px; color: #ccc;">Help</a>&nbsp;
+
+    </p>
+
+ 
+    <p class="footer-company-name" style="color: #fff;">Company Name © 2023</p>
+  </div>
+
+  <div class="footer-center">
+
+    <div>
+      <i class="fa fa-map-marker" style="background-color:#33383b;"></i>
+      <p><span>Sangli</span>Maharshtra</p>
+    </div>
+
+    <div>
+      <i class="fa fa-phone" style="background-color:#33383b;"></i>
+      <p><a type="fa-phone">+91 9763693455</a></p>
+    </div>
+
+    <div>
+      <i class="fa fa-envelope" style="background-color:#33383b;"></i>
+      <p><a href="mailto:shruti@gmail.com">shruti@gmail.com</a></p>
+    </div>
+
+  </div>
+
+  <div class="footer-right" id="footer">
+
+    
+    <h3> <img style="height: 80px; width: 80px;" src="symbol.jpg"></h3>
+    
+    <p class="footer-company-about">
+      <span>About the company</span>
+      As a restaurant management company, ensuring the ultimate experience in guest service and operations. </p>
+
+    <div class="footer-icons hoverdiv" style="background-color: transparent;">
+
+      <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/i/flow/login" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/shruti-dhere-583708227/" target="_blank"><i class="fa fa-linkedin"></i></a>
+      <a href="https://github.com/" target="_blank"><i class="fa fa-github"></i></a>
+
+    </div>
+
+  </div>
+
+
+</footer>
+
+<script>
+  function myFunction() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less"; 
+      moreText.style.display = "inline";
+    }
+  }
+  </script>
+</body>
+</html>

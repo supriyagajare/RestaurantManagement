@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+
+</head>
+<style>
+
+  
+  table{
+    box-shadow: -1px 12px 12px -6px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+table, td, th{
+  background: transparent;
+	border: 1px solid lightgray;
+	border-collapse: collapse;
+	text-align: center;
+	cursor: pointer;
+  color: white;
+}
+
+th{
+	background-color:rgba(0,0,0,0.5);
+	color: white;
+}
+
+tr:nth-child(odd){
+	background-color: lightblue;
+}
+
+tr:nth-child(odd):hover{
+    background-color:rgba(0,0,0,0.5);
+	color: white;
+	transform: scale(1.1);
+	transition: transform 300ms ease-in;
+}
+
+tr:nth-child(even){
+	background-color:rgba(0,0,0,0.5);
+}
+
+tr:nth-child(even):hover{
+	background-color:rgba(0,0,0,0.5);
+	transform: scale(1.1);
+	transition: transform 300ms ease-in;
+}
+
+
+.float-div2{
+  float: right;
+}
+.float-div1{
+  float: left;
+}
+
+.button {
+  padding: 10px 15px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: cadetblue;
+  border: none;
+  border-radius: 5px;
+
+}
+
+.button:hover {background-color:darkslategray}
+
+.button:active {
+  background-color: #3e8e41;
+
+  transform: translateY(4px);
+}
+  
+
+
+</style>
+<body>
+<div style="margin-left: 20px;">
+<a href="home" style="float: left;" class="previous button"><img src="assets/back1.png" width="30px">Back</a><br><br><br>
+  </div>
+
+
+  
+<h2 style="color: rgb(189, 219, 220);"> Restaurant List</h2>
+<div class="list row">
+    <div class="col-md-8">
+      <div class="input-group mb-3">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="input-group mb-3">
+              <div class="input-group-append">
+              <li class="nav-item dropdown" style=" list-style-type: none;"></li>
+              <!-- Add another input field for location -->
+              <input *ngIf="selectedSearchType === 'location' else restuarantName" type="text" class="form-control" 
+              [(ngModel)]="location" placeholder="Search by Restaurant Name or Location" 
+              class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" 
+              style="background-color: rgb(189, 219, 220);; width: 500px;  height: 50px;  color: black; border:3px solid gainsboro;" />
+
+              <ng-template #restuarantName>
+                <input type="text" class="form-control" [(ngModel)]="restaurantName" placeholder="Search By Restaurant Name or Location"  
+                class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" 
+                style="background-color: rgb(189, 219, 220); width: 500px; height: 50px; color: black; border:3px solid gainsboro;" />
+              </ng-template>
+              
+              <ul class="dropdown-menu">
+                <li><a id="01" class="dropdown-item" (click)="selectedSearchType = 'location'"><b>Restaurant Location</b></a></li>
+                <li><a id="02" class="dropdown-item" (click)="selectedSearchType = 'name'"><b>Restaurant Name</b></a></li>
+              </ul>
+              
+              
+                <button class="btn btn-outline-secondary" type="button" (click)="search(selectedSearchType)" style="color: azure; height: 50px;">
+                  Search
+                </button>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               
+                <div>
+                  <div class="float-div1">
+                    <li class="nav-item dropdown" style=" list-style-type: none; text-align: center;">
+                      <p class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;background-color: rgb(189, 219, 220); padding: 10px;">
+                        <b style="color: black; font-size: 1.2em; ">Restaurant Status</b>
+                      </p>
+                      <ul class="dropdown-menu" style=" list-style-type: none;">
+                        <li><a class="dropdown-item hoverlink" (click)="getVegRestaurant()" ><b>Veg Restaurant</b></a></li>
+                        <li><a class="dropdown-item" (click)="getNonVegRestaurant()"><b>NonVeg Restaurant</b></a></li>
+                      </ul>
+                          </li>
+                  </div>  
+              </div>
+            
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <div class="float-div1">
+                <li type="none" class="nav-item dropdown" style="text-align: center;">
+                  <h4 class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: rgb(189, 219, 220); padding: 10px; padding-bottom: 15px;">
+                    <b style="color: black; font-size: 1.2em; ">Sort By</b>
+                  </h4>
+                  <ul class="dropdown-menu">
+                    <li><a (click)="sortBy('costHigh')" class="dropdown-item"><b>Cost High to Low</b></a></li>
+                    <li><a (click)="sortBy('costLow')" class="dropdown-item"><b>Cost Low to High</b></a></li>
+                    <li><a (click)="sortBy('ratingLow')" class="dropdown-item"><b>Rating Low to High</b></a></li>
+                    <li><a (click)="sortBy('ratingHigh')" class="dropdown-item"><b>Rating High to Low</b></a></li>
+                  </ul>
+                </li>
+                
+                </div>
+
+
+
+              
+            </div>
+          </div>
+        </div>
+</div>
+</div>
+
+
+
+
+</div>
+<br><br><br>
+
+   <table class = "table table-dark table-striped" >
+    <thead>
+        <tr>
+            <th> Owner Name</th>
+            <th> Cost </th>
+            <th> Restaurant Name</th>
+            <th> Ratings </th>
+            <th> Location </th>
+            <th> VegRestaurant</th>
+            <th> Actions </th>
+            
+        </tr>
+    </thead>
+    <tbody style="color: azure;">
+        <tr *ngFor = "let rest of restaurants | paginate: { itemsPerPage: count, currentPage: pageNo }" >
+          
+            <td style="background-color: transparent;"> {{ rest.ownerName }} </td>
+            <td style="background-color: transparent;"> {{ rest.avgCost }} </td>
+            <td style="background-color: transparent;"> {{ rest.restaurantName }} </td>
+            <td style="background-color: transparent;"> {{ rest.ratings }} </td>
+            <td style="background-color: transparent;"> {{ rest.location }} </td>
+            <td style="background-color: transparent;"> {{ rest.isVegRestaurant}}</td>
+
+            <td style="background-color: transparent;">
+                <button (click) = "updateRestaurant(rest.restaurantId)" class = "btn btn-light"> 
+                 Update</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button (click) = "deleteRestaurant(rest.restaurantId)" class = "btn btn-danger" style="margin-left: 10px;" > <i style="font-size: 24px" class="fa">&#xf1f8;</i> Delete</button>
+
+                <div class="float-div2">
+                  <li type="none" class="nav-item dropdown">
+                <button class = "nav-link dropdown-toggle btn btn-secondary viewbtn" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: rgb(255, 255, 204); color: black; padding: 8px; margin-right: 50px;">
+                  <i class="fa fa-eye" aria-hidden="true"></i> View</button>
+
+                <ul class="dropdown-menu" >
+                  <li><a (click)="restaurantDetails(rest.restaurantId)" class="dropdown-item"><b>View Restaurant</b></a></li>
+                  <li><a (click)="getUsersByRestaurantId(rest.restaurantId)" class="dropdown-item"><b>View Cutomers</b></a></li>
+                  <!-- <li><a (click)="viewAllFoodItemsOfCurrentRest(rest.restaurantId)" class="dropdown-item"><b>View Menu</b></a></li>-->
+                  <li><a (click)="addFoodMenu(rest.restaurantId)" class="dropdown-item"><b>View Menu</b></a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              </div>
+
+
+                <!-- <button (click) = "getUsersByRestaurantId(rest.restaurantId)" class = "btn btn-secondary viewbtn" style="margin-left: 10px; background-color: rgb(255, 255, 204); color: black; "> Customers</button>
+           -->
+              </td>
+            
+        </tr>
+
+        <td *ngIf="restaurants !== null">
+          <button class="m-3 btn btn-sm btn-danger" (click)="removeAllRestaurants()">
+            <i style="font-size: 24px" class="fa">&#xf1f8;</i>
+            Remove All Restaurants
+          </button>
+        </td>
+    </tbody>
+</table>
+</div>
+<div style="color: rgb(189, 219, 220); place-items: center;">
+<div style="font-weight: bold;"><pagination-controls (pageChange)="pageNo = $event"></pagination-controls> </div>
+</div>
+</body>
+</html>

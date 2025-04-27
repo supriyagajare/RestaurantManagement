@@ -1,0 +1,13 @@
+<div class="col-md-6 offset-md-3" style="background-color:rgba(0,0,0,0.5); margin: auto; padding: 100px;">
+    
+  <h1 style="color: white; text-align: center;">Create Order</h1> <br><br>
+
+  <!-- Display user and menu item IDs from query parameters -->
+  <label style="color: azure;" for="userId">User ID: &nbsp; &nbsp; &nbsp;</label>
+  <input type="number" id="userId" [value]="userIdFromQueryParam" readonly>
+<br><br>
+  <label style="color: azure;" for="foodId">Food ID:&nbsp; &nbsp; &nbsp;</label>
+  <input type="number" id="foodId" [value]="foodIdFromQueryParam" readonly>
+  <br><br>
+  <button style="color: black;" (click)="createOrder()">Create Order</button>
+</div>

@@ -1,0 +1,792 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Restaurant Management</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+  <style>
+body{
+	
+	background-image: url('17.jpg');
+	background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  opacity: 1.0;
+ 
+
+}
+
+.containers{
+  display: inline-block;
+}
+
+.texts{
+  font-size: 5em;
+  
+  font-family: monospace;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: 
+          typing 2s steps(15),
+          cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor{
+  50% { border-color: transparent}
+}
+
+@keyframes typing{
+  from{ width: 0;}
+}
+
+.containers1{
+  display: inline-block;
+}
+
+.texts1{
+  font-size: 3em;
+  
+  font-family: monospace;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: 
+          typing1 2s steps(15),
+          cursor1 .4s step-end infinite alternate;
+}
+
+@keyframes cursor1{
+  50% { border-color: transparent}
+}
+
+@keyframes typing1{
+  from{ width: 0;}
+}
+
+a:hover {
+    color: black;
+    background-color: orange;
+}
+
+
+.fade-in.appear{
+  opacity: 1;
+}
+
+hoverlink:hover{
+  color: black;
+    background-color: orange;
+}
+
+
+
+     .footer-distributed{
+	background-color:rgba(0,0,0,0.5);
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  lightseagreen;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+.wrapper {
+padding-top: 120px;
+}
+.card-img-top {
+box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+.card-body{
+    text-align: center;
+    box-shadow: 0px 15px 15px -8px rgba(0,0,0,0.5)
+}
+.card-body h6 {
+font-size: 14px;
+text-transform: uppercase;
+color: deeppink;
+}
+.card-title {
+text-transform: uppercase;
+font-weight: bold;
+font-size: 24px;
+}
+
+.socials a {
+width: 40px;
+height: 40px;
+display: inline-block;
+border-radius: 50%;
+margin: 0 5px;
+}
+.socials a i {
+color: #fff;
+padding: 12px 0;
+}    
+
+.socials a:nth-child(1) {
+background: #3b5998;
+}.socials a:nth-child(2) {
+background: #ff0000;
+}.socials a:nth-child(3) {
+background: #007bb5;
+}.socials a:nth-child(4) {
+background: #ea4c89;
+}
+
+@media (max-width: 800px){
+    .mx-30{
+        margin-bottom: 30px;
+    }
+}
+
+.myslides {display: none;}
+            img {vertical-align: middle;}
+
+            /*slideshow container*/
+            .slideshow-container{
+                max-width: 500px;
+                position: relative;
+                margin: auto;
+            }
+            /*caption text*/
+            .text {
+                color: black;
+                font-size: 20px;
+                padding: 8px 12px;
+                position: absolute;
+                bottom: 8px;
+                width: 100%;
+                text-align: center;
+            }
+            /*number text (1/3 etc)*/
+            .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
+            /*the dots/bullets/indicators*/
+            .dot {
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+            .active{
+                background-color: #04AA6D;
+            }
+            /*fadding animation*/
+            .fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1.5s;
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+            @-webkit-keyframes fade {
+                from {opacity: .4;}
+                to {opacity: 1;}
+            }
+            @keyframes fade {
+                from {opacity: .4;}
+                to {opacity: 1;}
+            }
+
+            /* fading images*/
+            .fade-in-image {
+  animation: fadeIn 50s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+ /* card flip*/
+ .container{
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .card{
+    position: relative;
+    cursor: pointer;
+    background-color: rgb(219, 234, 234);
+}
+
+.container .card .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.container .card .face.face1{
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container .card:hover .face.face1{
+    background: #ff0057;
+    transform: translateY(0);
+}
+
+.container .card .face.face1 .content{
+    opacity: 0.2;
+    transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content{
+    opacity: 1;
+}
+
+.container .card .face.face1 .content img{
+    max-width: 100px;
+}
+
+.container .card .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.container .card .face.face2{
+    position: relative;
+    background: rgb(219, 234, 234);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.container .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.container .card .face.face2 .content a:hover{
+    background: #333;
+    color: #fff;
+}
+  
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light" id="navbar-Scroll" style="background-color: rgb(189, 219, 220)">
+    <div class="navbar-brand" href="#">
+      <img src="symbol.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
+      Restaurant
+    </div>
+  
+    <div class="collapse navbar-collapse " id="navbarSupportedContent" style="background-color: rgb(189, 219, 220)">
+      <ul class="navbar-nav mr-auto" style="background-color: rgb(189, 219, 220)">
+        <li class="nav-item active"  style="background-color: rgb(189, 219, 220)">
+          <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Restaurant-Menu</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item hoverlink" href="create-restaurant"><b>Add Restaurant</b></a></li>
+            <li><a class="dropdown-item" href="restaurants"><b>Restaurant List</b></a></li>
+           
+          </ul>
+          </li>
+
+        <li class="nav-item ">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+       
+      </ul>
+      
+    </div>
+  </nav>
+
+
+  <div class="content">
+    <div class="bg-image fade-in-image" 
+    style="background-color: rgba(15, 23, 43, .9); height: 50vh;">
+    <nav class="navbar navbar-expand-sm ">
+        <div class="container-fluid" >
+          
+        </div>
+      </nav>
+      <div class="containers" style="color: #fff; text-align: center; padding: 100px;">
+    <h1 class="texts"><i>Restaurant Management System</i></h1>
+    <a style="color: rgb(189, 219, 220); font-size: 1.5em;" href="home.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;<a style="color: rgb(189, 219, 220); font-size: 1.5em;" href="#footer">Contact</a>
+  </div>
+    </div>
+<section class="w3-container w3-center w3-content fade-in-image" style="max-width:600px; margin: 100px; color: #fff;">
+    <h2 class="w3-wide containers1 texts1" style="color: rgb(189, 219, 220)">TABLE BOOKING</h2>
+    <p class="w3-opacity"><i>Restaurant Management System</i></p>
+    <p class="w3-justify">We propose to build a software project that can efficiently handle 
+      and manage various activities of a restaurant and all these activities will be happening under the 
+      supervision of the administrator. The businesses in restaurants are now growing constantly. 
+      At the same time, the need for managing its operations and tasks arises. The best way to optimize 
+      these activities is growing the business online as well. Today’s generation encourages high-tech 
+      services especially over the Internet. Hence the project is developed proficiently to help restaurant 
+      owners automate their business operations. This project serves the best way of maintaining customer’s
+      information and caters their needs.</p>
+  </section>
+  <div style="	background-color:rgba(0,0,0,0.5);"><br>
+  <div class="slideshow-container">
+    <div class="myslides fade">
+        <div class="numbertext"></div>
+        <img src="td1.jpg" style="width: 100%;">
+      
+    </div>
+
+    <div class="myslides fade">
+        <div class="numbertext"></div>
+        <img src="td2.jpeg" style="width: 100%;">
+        
+    </div>
+
+    <div class="myslides fade">
+        <div class="numbertext"></div>
+        <img src="td3.jpg" style="width: 100%;">
+       
+    </div>
+</div>
+<br>
+
+<div style="text-align: center;">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+</div>
+
+
+<div class="w3-row w3-padding-64" id="about" style="background-color: rgba(0,0,0,0.5);">
+  <div class="w3-col m6 w3-padding-large w3-hide-small"><br><br>
+   <img src="r1.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="500" height="650" style="margin-left: 80px;">
+  </div>
+
+  <br><br><br>
+  <div class="w3-col m6 w3-padding-large" style="color: #fff;">
+    <h1 class="w3-center" style="color: rgb(189, 219, 220)">About Management</h1><br>
+    <h5 class="w3-center">Tradition 2023</h5>
+    <p class="w3-justify" style="margin-right: 40px;">A restaurant management system project typically involves 
+      designing and developing a software solution that helps streamline various 
+      operations and tasks within a restaurant. The goal is to improve efficiency, 
+      enhance customer experience, and facilitate better management of resources. 
+      Here's an overview of what such a project might involve: <br>
+     
+    </p></div>
+</div>
+
+
+<hr>
+
+ <br><br>
+
+
+<div>
+
+<div class="container">
+  <div class="card">
+      <div class="face face1">
+          <div class="content">
+              <img src="f1.jpg">
+              <h3>Service</h3>
+          </div>
+      </div>
+      <div class="face face2">
+          <div class="content">
+              <p>Manage all the services of restaurants. Add new Restaurants and details. Update, Delete, Gave rating, booking System of tables....</p>
+                  <a href="login.html">Read More</a>
+          </div>
+      </div>
+  </div>
+  <div class="card">
+      <div class="face face1">
+          <div class="content">
+              <img src="f3.jpg">
+              <h3>Founders</h3>
+          </div>
+      </div>
+      <div class="face face2">
+          <div class="content">
+              <p><b>Founders Name:</b> <br>CEO. Shruti <br>Miss. Akshata <br>Er. Supriya</p>
+                  <a href="about.html">Read More</a>
+          </div>
+      </div>
+  </div>
+  <div class="card">
+      <div class="face face1">
+          <div class="content">
+              <img src="f6.jpg">
+              <h3>Launch</h3>
+          </div>
+      </div>
+      <div class="face face2">
+          <div class="content">
+              <p>Tradition 2023 <br> Restaurant Management © 2023</p>
+                  <a href="home.html">Read More</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+<br><br>
+<hr>
+ 
+<br>
+<footer class="footer-distributed" style="width: 100%; margin-right: 0%;">
+
+  <div class="footer-left">
+
+    <p class="footer">
+      &nbsp;&nbsp;
+      
+      <a href="contact.html"style="color: #ccc;">Contact</a><br><br>&nbsp;&nbsp;
+
+      <!-- <a href="assets/card.html" style="color: #ccc;">List</a><br><br>&nbsp;&nbsp; -->
+
+	  <a href="#" style="color: #ccc;">Setting</a><br><br>&nbsp;&nbsp;
+
+    <a href="contact.html" style="color: #ccc;">Help</a>&nbsp;&nbsp;
+
+    </p>
+
+    <p class="footer-company-name" style="color: #fff;">Restaurant Management © 2023</p>
+  </div>
+
+  <div class="footer-center">
+
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p><span>Sangli</span>Maharshtra</p>
+    </div>
+
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>+91 9763693455</p>
+    </div>
+
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="mailto:shruti@gmail.com">shruti@gmail.com</a></p>
+    </div>
+
+  </div>
+
+  <div class="footer-right" id="footer">
+
+    
+    <h3> <img style="height: 80px; width: 80px;" src="symbol.jpg"></h3>
+    
+    <p class="footer-company-about">
+      <span>About the company</span>
+      As a restaurant management company, ensuring the ultimate experience in guest service and operations. </p>
+
+
+    <div class="footer-icons hoverdiv">
+
+      <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/i/flow/login" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/shruti-dhere-583708227/" target="_blank"><i class="fa fa-linkedin"></i></a>
+      <a href="https://github.com/" target="_blank"><i class="fa fa-github"></i></a>
+
+    </div>
+
+  </div>
+
+
+</footer>
+
+<script>
+  var slideindex = 0;
+  showslides();
+  function showslides() {
+      var i;
+      var slides =document.getElementsByClassName("myslides");
+      var dots = document.getElementsByClassName("dot");
+      for (i=0; i<slides.length; i++)
+      {
+          slides[i].style.display ="none";
+      }
+      slideindex++;
+      if(slideindex >  slides.length)
+      {slideindex =1}
+      for (i=0; i<dots.length; i++) {
+          dots[i].className.replace(" active","");
+      }
+          slides[slideindex-1].style.display = "block";
+          dots[slideindex-1].className += " active";
+          setTimeout(showslides, 2000);//change image every 2 seconds
+  }
+
+  window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar-Scroll");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+
+</body>
+</html>

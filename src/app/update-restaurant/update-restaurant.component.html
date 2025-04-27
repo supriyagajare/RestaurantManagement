@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="update-restaurant.component.css">
+<style>
+       .button {
+  padding: 10px 15px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: cadetblue;
+  border: none;
+  border-radius: 5px;
+
+}
+
+.button:hover {background-color:darkslategray}
+
+.button:active {
+  background-color: #3e8e41;
+
+  transform: translateY(4px);
+}
+
+</style>
+</head>
+<body>
+
+    <a routerLink="/restaurants" style="float: left;" class="previous button"><img src="assets/back1.png" width="30px">Back</a><br><br><br>
+ 
+
+
+<div class="col-md-6 offset-md-3" style="background-color:rgba(0,0,0,0.5); margin: auto; padding: 100px;">
+    <h3 style="color: azure; text-align: center;"> Update Restaurant </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Owner Name</label>
+            <input type="text" class ="form-control" id = "ownerName"
+                [(ngModel)] = "restaurant.ownerName" name = "ownerName" placeholder="Owner Name">
+        </div>
+    
+        <div class="form-group">
+            <label>Average Cost</label>
+            <input type="text" class ="form-control" id = "avgCost"
+                [(ngModel)] = "restaurant.avgCost" name = "avgCost" placeholder="Average Cost">
+        </div>
+    
+        <div class="form-group">
+            <label> Restaurant Name</label>
+            <input type="text" class ="form-control" id = "restaurantName"
+                [(ngModel)] = "restaurant.restaurantName" name = "restaurantName" placeholder="RestaurantName">
+        </div>
+
+        <div class="form-group">
+            <label> Ratings</label>
+            <input type="text" class ="form-control" id = "ratings"
+                [(ngModel)] = "restaurant.ratings" name = "ratings" placeholder="Ratings">
+        </div>
+
+        <div class="form-group">
+            <label> Location</label>
+            <input type="text" class ="form-control" id = "location"
+                [(ngModel)] = "restaurant.location" name = "location" placeholder="Location">
+        </div>
+    
+        <div>
+            <label> Type of Restaurant</label><br>
+            <input class="form-check-input" type="radio" name="isVegRestaurant"
+                [(ngModel)]="restaurant.isVegRestaurant" value="true"/>
+            <label class="form-check-label">Veg Restaurant </label><br>
+
+            <input class="form-check-input" type="radio" name="isVegRestaurant"
+                [(ngModel)]="restaurant.isVegRestaurant" value="false"/>   
+            <label class="form-check-label">Non Veg Restaurant </label><br><br>
+        </div>
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 
+    </body>
+    </html>

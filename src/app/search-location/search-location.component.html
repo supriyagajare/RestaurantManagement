@@ -1,0 +1,83 @@
+
+<html>
+  <head>
+  <style>
+    a:hover{
+      color: black;
+      background-color: grey;
+    }
+</style>
+</head>
+<body>
+<div style="color: azure;">
+  <div style="float: left; width: 40%; ">
+    <input type="text" name="location" [(ngModel)]="location" />
+    <button type="button" (click)="searchRestaurantByLocation()">Search Restaurants by Location</button>
+  </div>
+
+    <!-- <div style="float: right;">
+      <li type="none" class="nav-item dropdown">
+        <h4 class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+          <b style="color: azure;">Sort By</b>
+        </h4>
+        <ul class="dropdown-menu">
+          <li><a (click)="sortBy('costHigh')" class="dropdown-item"><b>Cost High to Low</b></a></li>
+          <li><a (click)="sortBy('costLow')" class="dropdown-item"><b>Cost Low to High</b></a></li>
+          <li><a (click)="sortBy('ratingLow')" class="dropdown-item"><b>Rating Low to High</b></a></li>
+          <li><a (click)="sortBy('ratingHigh')" class="dropdown-item"><b>Rating High to Low</b></a></li>
+        </ul>
+      </li> -->
+
+  </div>
+  
+    <br>
+    <div *ngIf="restaurants.length > 0; else noRestaurants">
+      <br><h2>Restaurants Found:</h2>
+       
+      
+
+    <table class = "table table-dark table-striped">
+      <thead>
+          <tr>
+              <th> Owner Name</th>
+              <th> Cost </th>
+              <th> Restaurant Name</th>
+              <th> Ratings </th>
+              <th> Location </th>
+              <th> IsVeg</th>
+              <th> Actions </th>
+              
+          </tr>
+      </thead>
+      <tbody style="color: azure;">
+        <tr *ngFor = "let rest of restaurants" >
+          
+            <td> {{ rest.ownerName }} </td>
+            <td> {{ rest.avgCost }} </td>
+            <td> {{ rest.restaurantName }} </td>
+            <td> {{ rest.ratings }} </td>
+            <td> {{ rest.location }} </td>
+            <td> {{ rest.isVegRestaurant}}</td>
+
+            <td>
+                <button (click) = "updateRestaurant(rest.restaurantId)" class = "btn btn-light"> Update</button>
+                <button (click) = "deleteRestaurant(rest.restaurantId)" class = "btn btn-danger" style="margin-left: 10px;" > Delete</button>
+                <button (click) = "restaurantDetails(rest.restaurantId)" class = "btn btn-secondary viewbtn" style="margin-left: 10px; background-color: rgb(255, 255, 204); color: black; "> View</button>
+            </td>
+            
+        </tr>
+        </tbody>
+    
+    </table></div>
+    <ng-template #noRestaurants>
+      <h2>No Restaurants Found</h2>
+    </ng-template>
+    
+    <div *ngIf="restaurants.length === 0">
+      <p>No restaurants found for the given location.</p>
+    </div>
+    
+
+  
+  </body>
+  </html>

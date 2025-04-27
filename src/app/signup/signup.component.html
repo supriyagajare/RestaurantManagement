@@ -1,0 +1,74 @@
+
+
+
+<div class="col-md-6 offset-md-3" style=" background-color: rgba(15, 23, 43, .9); color: azure;  margin: auto; padding: 100px;">
+
+  <div class="form-group">
+  <label class="control-label"  for="username">Adminname</label>
+          <div class="controls">
+            <input type="text" id="username" name="username" placeholder="Enter your username" class ="form-control" #userName>
+           
+          </div>
+          </div>
+        
+     
+          <div class="form-group">
+           
+         <label class="control-label"  for="username">Date of Birth</label>
+          <div class="controls">
+            <input type="date" id="dob" name="dob" placeholder="" class ="form-control" #dob>
+           
+          </div>
+        </div>
+
+
+
+        <div class="form-group">
+            
+            <label class="control-label" for="email">E-mail</label>
+            <div class="controls">
+              <input type="email" id="email" name="email" placeholder="Enter your email" class ="form-control" #email>
+              
+            </div>
+          </div>
+
+          <div class="form-group">
+             
+            <label class="control-label" for="password">Password</label>
+            <div class="controls">
+              <input type="password" id="password" name="password" placeholder="Set Password" class ="form-control" #password>
+             
+            </div>
+          </div>
+
+          <div class="form-group">
+          
+             <label class="control-label"  for="password_confirm">Password (Confirm)</label>
+            <div class="controls">
+              <input type="password" id="password_confirm" name="password_confirm" placeholder="Retype Password" class ="form-control" #repassword>
+              
+            </div>
+          </div>
+    
+
+         <fieldset>
+          <div class="form-group">
+         
+             <label class="control-label"  for="username">Bio</label>
+            <div class="controls">
+              <textarea rows="6" cols="40" type="text" id="about" name="about" placeholder="Enter your bio" class ="form-control" #about></textarea>
+              
+            </div>
+          </div>
+
+
+
+          <div class="control-group"> 
+            
+             <div class="controls">
+              <button class="btn btn-primary" type="submit" (click)="saveUser(userName.value, dob.value, email.value, password.value, repassword.value, about.value)">Sign up</button>
+            </div>
+          </div>
+        </fieldset>
+    
+        </div>

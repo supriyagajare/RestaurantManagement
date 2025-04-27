@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="restaurant-details.component.css">
+<style>
+
+table, td, th{
+  width: 100px;
+  background: transparent;
+	border: 1px solid lightgray;
+	border-collapse: collapse;
+	text-align: center;
+	cursor: pointer;
+ 
+}
+
+th{
+	background-color:rgba(0,0,0,0.5);
+	color: white;
+}
+
+tr:nth-child(odd){
+	background-color: rgb(189, 219, 220);
+  color: black;
+}
+
+tr:nth-child(odd):hover{
+    background-color:rgba(0,0,0,0.5);
+	color: white;
+	transform: scale(1.1);
+	transition: transform 300ms ease-in;
+}
+
+tr:nth-child(even){
+	background-color:rgba(0,0,0,0.5);
+  color: azure;
+}
+
+tr:nth-child(even):hover{
+	background-color:rgba(0,0,0,0.5);
+	transform: scale(1.1);
+	transition: transform 300ms ease-in;
+  color: azure;
+}
+
+
+.containers1{
+  display: inline-block;
+}
+
+.texts1{
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: 
+          typing1 4s steps(20),
+          cursor1 .4s step-end infinite alternate;
+}
+
+@keyframes cursor1{
+  50% { border-color: transparent}
+}
+
+@keyframes typing1{
+  from{ width: 0;}
+}
+
+.button {
+  padding: 10px 15px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: cadetblue;
+  border: none;
+  border-radius: 5px;
+
+}
+
+.button:hover {background-color:darkslategray}
+
+.button:active {
+  background-color: #3e8e41;
+
+  transform: translateY(4px);
+}
+
+</style>
+</head>
+<body>
+  <a routerLink="/restaurants" style="float: left;" class="previous button"><img src="assets/back1.png" width="30px">Back</a><br><br><br>
+ 
+<br><br>
+<h3 style="color: azure; text-align: center;"> View Restaurant Details</h3>
+<br><br>
+<div style="background-color:rgba(0,0,0,0.5); margin: auto; padding: 100px;">
+<div style="color: black;">
+  <table border="5"
+  cellpadding="15"
+  cellspacing="7"
+  style=" padding: 100px; width: 500px; margin-left: 300px;"
+>
+    <tbody >
+      <tr><td>
+        <div class="containers1 texts1">
+            <label> <b> Restaurant Id: </b></label> {{restaurant.restaurantId}}
+        </div>
+    
+      </td>
+      </tr>
+    <tr><td>
+    <div class="containers1 texts1">
+        <label> <b> Owner Name: </b></label> {{restaurant.ownerName}}
+    </div>
+
+  </td>
+  </tr>
+  <tr><td>
+    <div class="containers1 texts1">
+        <label> <b> Cost: </b></label> {{restaurant.avgCost}}
+    </div>
+  </td>
+</tr>
+<tr>
+  <td>
+    <div class="containers1 texts1">
+        <label> <b> Restaurant Name: </b></label> {{restaurant.restaurantName}}
+    </div>
+  </td>
+</tr>
+<tr>
+  <td>
+    <div class="containers1 texts1" >
+        <label> <b> Ratings: </b></label> {{restaurant.ratings}}
+    </div>
+  </td>
+</tr>
+<tr>
+  <td>
+    <div class="containers1 texts1">
+        <label> <b> Location: </b></label> {{restaurant.location}}
+    </div>
+  </td>
+</tr>
+<tr>
+  <td>
+    <div class="containers1 texts1">
+        <label> <b> Veg Restaurant: </b></label> {{restaurant.isVegRestaurant}}
+    </div>
+  </td>
+</tr>
+
+    </tbody>
+  </table>
+ </div>
+ <br><br>
+
+ <button (click) = "addBooking(restaurantId)" class = "btn btn-secondary viewbtn" style="margin-left: 480px; background-color: rgb(255, 255, 204); color: black; padding: 20px;"> Book A Table</button>
+
+
+    <!-- <button (click)="addBooking(restaurantId)" style="font-size:32px;background-color:#FFEB3B; color:rgba(0, 0, 0, 0.87); padding:10px; border:none;  box-shadow: 0 2px 4px rgba(0, 0, 0, .6);">
+      BOOK NOW
+  </button> --> 
+</div>
+
+
+
+
+<div>
+ </div>
+</body>
+</html>

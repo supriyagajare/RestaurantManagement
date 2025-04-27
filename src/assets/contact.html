@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Restaurant Mangement</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+
+    <style>
+
+body{
+	
+	background-image: url('17.jpg');
+	background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  opacity: 1.0;
+
+}
+
+.fade-in-image {
+  animation: fadeIn 50s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+.containers1{
+  display: inline-block;
+}
+
+.texts1{
+  font-size: 3em;
+  
+  font-family: monospace;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: 
+          typing1 2s steps(15),
+          cursor1 .4s step-end infinite alternate;
+}
+
+@keyframes cursor1{
+  50% { border-color: transparent}
+}
+
+@keyframes typing1{
+  from{ width: 0;}
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+a:hover {
+    color: black;
+    background-color: orange;
+}
+
+.hoverdiv:hover{
+  background-color: dimgray;
+    color: blue;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+           .footer-distributed{
+	background-color:rgba(0,0,0,0.5);
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  lightseagreen;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+.wrapper {
+padding-top: 120px;
+}
+.card-img-top {
+box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+.card-body{
+    text-align: center;
+    box-shadow: 0px 15px 15px -8px rgba(0,0,0,0.5)
+}
+.card-body h6 {
+font-size: 14px;
+text-transform: uppercase;
+color: deeppink;
+}
+.card-title {
+text-transform: uppercase;
+font-weight: bold;
+font-size: 24px;
+}
+
+.socials a {
+width: 40px;
+height: 40px;
+display: inline-block;
+border-radius: 50%;
+margin: 0 5px;
+}
+.socials a i {
+color: #fff;
+padding: 12px 0;
+}    
+
+.socials a:nth-child(1) {
+background: #3b5998;
+}.socials a:nth-child(2) {
+background: #ff0000;
+}.socials a:nth-child(3) {
+background: #007bb5;
+}.socials a:nth-child(4) {
+background: #ea4c89;
+}
+
+@media (max-width: 800px){
+    .mx-30{
+        margin-bottom: 30px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(189, 219, 220);">
+    <div class="navbar-brand">
+      <img src="symbol.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
+      Restaurant
+    </div>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Restaurant-Menu</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item hoverlink" href="create-restaurant"><b>Add Restaurant</b></a></li>
+            <li><a class="dropdown-item" href="restaurants"><b>Restaurant List</b></a></li>
+           
+          </ul>
+          </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span></a>
+        </li>
+       
+      </ul>
+      
+    </div>
+  </nav>
+
+
+
+
+
+
+
+        <div class="bg-image fade-in-image" 
+        style="background-color: rgba(15, 23, 43, .9);; height: 50vh;">
+        <nav class="navbar navbar-expand-sm ">
+            <div class="container-fluid" >
+              
+            </div>
+          </nav>
+          <div style="color: #fff; text-align: center; padding: 100px;">
+        <h1 class="containers1 texts1"><i><b>Contact US</b></i></h1>
+        <a style="color: rgb(189, 219, 220); font-size: 1.5em;" href="home.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a style="color: rgb(189, 219, 220); font-size: 1.5em;" href="#footer">Contact</a>
+      </div>
+        </div>
+        <br><br>  <br><br>
+        <div class="container" style="background-color:rgba(0,0,0,0.5); margin: auto; padding: 100px;">
+          <div style="text-align:center; color: #fff;">
+            <h2 style="font-size: 2em;color: rgb(189, 219, 220);">Get In Touch
+            </h2>
+            <h5 style="color:darkgrey">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within a matter of hours to help you.</h5>
+          </div>
+          <div class="row">
+            <div class="column">
+              <br><br>
+              <img src="td2.jpeg" style="width:100%">
+            </div>
+            <div class="column">
+              <form action="/action_page.php" style="color: #fff;">
+                <label style="font-size: 1.3em;" for="fname">First Name</label>
+                <input  type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label style="font-size: 1.3em;" for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <label style="font-size: 1.3em;" for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+          </div>
+        </div>
+        
+     
+
+        <br><br><br><br><br>
+        <footer class="footer-distributed" style="width: 100%; margin-right: 0%;">
+
+          <div class="footer-left">
+        
+            <p class="footer">
+              &nbsp;&nbsp;
+              
+              <a href="contact.html"style="color: #ccc;">Contact</a><br><br>&nbsp;&nbsp;
+        
+              <!-- <a href="assets/card.html" style="color: #ccc;">List</a><br><br>&nbsp;&nbsp; -->
+        
+            <a href="#" style="color: #ccc;">Setting</a><br><br>&nbsp;&nbsp;
+        
+            <a href="contact.html" style="color: #ccc;">Help</a>&nbsp;&nbsp;
+        
+            </p>
+        
+            <p class="footer-company-name" style="color: #fff;">Company Name © 2023</p>
+          </div>
+        
+          <div class="footer-center">
+        
+            <div>
+              <i class="fa fa-map-marker"></i>
+              <p><span>Sangli</span>Maharshtra</p>
+            </div>
+        
+            <div>
+              <i class="fa fa-phone"></i>
+              <p>+91 9763693455</p>
+            </div>
+        
+            <div>
+              <i class="fa fa-envelope"></i>
+              <p><a href="mailto:shruti@gmail.com">shruti@gmail.com</a></p>
+            </div>
+        
+          </div>
+        
+          <div class="footer-right" id="footer">
+        
+            
+            <h3> <img style="height: 80px; width: 80px;" src="symbol.jpg"></h3>
+            
+            <p class="footer-company-about">
+              <span>About the company</span>
+              As a restaurant management company, ensuring the ultimate experience in guest service and operations. </p>
+        
+        
+            <div class="footer-icons hoverdiv" style="background-color: transparent;">
+        
+              <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://twitter.com/i/flow/login" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/shruti-dhere-583708227/" target="_blank"><i class="fa fa-linkedin"></i></a>
+              <a href="https://github.com/" target="_blank"><i class="fa fa-github"></i></a>
+        
+            </div>
+        
+          </div>
+        
+
+
+</footer>
+</body>
+</html>
